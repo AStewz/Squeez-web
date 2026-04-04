@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Squeez — Recipe Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow: #F5D32A;
+      --amber: #E8960A;
+      --orange: #C4610A;
+      --brown: #4A2800;
+      --cream: #FFFBF0;
+      --text-muted: #9A6030;
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--brown);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .bg-blobs {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.22;
+    }
+
+    .blob-1 {
+      width: 500px; height: 500px;
+      background: var(--yellow);
+      top: -150px; right: -100px;
+      animation: drift 12s ease-in-out infinite alternate;
+    }
+
+    .blob-2 {
+      width: 350px; height: 350px;
+      background: var(--amber);
+      bottom: -80px; left: -80px;
+      animation: drift 16s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes drift {
+      from { transform: translate(0, 0) scale(1); }
+      to { transform: translate(30px, 20px) scale(1.05); }
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .logo-wrap {
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .logo-wrap img {
+      width: 300px;
+      max-width: 75vw;
+      height: auto;
+    }
+
+    .tagline {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.3rem, 4vw, 1.85rem);
+      font-weight: 400;
+      color: var(--brown);
+      line-height: 1.5;
+      max-width: 420px;
+      margin-bottom: 0.85rem;
+      animation: fadeUp 0.8s 0.1s ease both;
+    }
+
+    .tagline em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .sub {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--brown);
+      color: var(--yellow);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      margin-bottom: 3rem;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+
+    .badge-dot {
+      width: 6px; height: 6px;
+      background: var(--yellow);
+      border-radius: 50%;
+      animation: pulse 2s ease infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.65); }
+    }
+
+    .links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.4s ease both;
+    }
+
+    .links a {
+      color: var(--orange);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1.5px;
+      background: var(--orange);
+      transition: width 0.2s ease;
+    }
+
+    .links a:hover::after { width: 100%; }
+
+    .divider {
+      width: 1px; height: 14px;
+      background: var(--amber);
+      opacity: 0.35;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(232, 150, 10, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <main>
+    <div class="logo-wrap">
+      <img src="https://monliopueoanzquualme.supabase.co/storage/v1/object/public/Assets/App%20Horizontal%20Logo.png" alt="Squeez" />
+    </div>
+    <p class="tagline">Save, organise, and cook your<br><em>favourite recipes</em> — all in one place.</p>
+    <p class="sub">Import from any website, social media, or photo. Coming to iOS.</p>
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Coming soon to the App Store
+    </div>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <div class="divider"></div>
+      <a href="mailto:hello@squeez.uk">hello@squeez.uk</a>
+    </div>
+  </main>
+
+  <footer>© 2026 Alexander John Stewart</footer>
+</body>
+</html>
