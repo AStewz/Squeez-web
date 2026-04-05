@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Opening Squeez...</title>
+  <p id="debug" style="font-size:12px; 
+        color:#C4610A; word-break:break-all;">
+    </p>
+  </div>
+  <script>
+    (function() {
+      // Show full URL for debugging
+      document.getElementById('debug')
+          .textContent = 
+          'URL: ' + window.location.href;
+
+      // Parse both query params and fragment
+      const search = window.location.search;
+      const hash = window.location.hash
+          .substring(1);
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 
