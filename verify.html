@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening Squeez...</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 
+          'Segoe UI', sans-serif;
+      background: #FFFBF0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      padding: 40px 24px;
+    }
+    img {
+      width: 140px;
+      margin-bottom: 24px;
+    }
+    p {
+      color: #8A5200;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img 
+      src="https://monliopueoanzquualme.supabase.co/storage/v1/object/public/Assets/App%20Horizontal%20Logo.png" 
+      alt="Squeez"
+    />
+    <p>Opening Squeez...</p>
+  </div>
+  <script>
+    (function() {
+      // Parse both query params and fragment
+      const search = window.location.search;
+      const hash = window.location.hash
+          .substring(1);
+      
+      const queryParams = 
+          new URLSearchParams(search);
+      const fragmentParams = 
+          new URLSearchParams(hash);
+
+      // Get token_hash — could be in 
+      // query or fragment depending on 
+      // Supabase flow type
+      const tokenHash = 
+          queryParams.get('token_hash') ||
+          fragmentParams.get('token_hash');
+
+      // Get type
+      const type = 
+          queryParams.get('type') ||
+          fragmentParams.get('type') ||
+          'email_change';
+
+      // Get access_token (implicit flow 
+      // fallback)
+      const accessToken = 
+          fragmentParams.get('access_token');
+      const refreshToken = 
+          fragmentParams.get('refresh_token');
+
+      let appUrl;
+
+      if (tokenHash) {
+        // token_hash flow — preferred
+        appUrl = 'squeez://callback'
+            + '?token_hash=' + tokenHash
+            + '&type=' + type;
+      } else if (accessToken) {
+        // implicit flow fallback
+        appUrl = 'squeez://callback#'
+            + 'access_token=' + accessToken
+            + '&refresh_token=' + refreshToken
+            + '&type=' + type;
+      } else {
+        // No token found — just open app
+        appUrl = 'squeez://callback';
+      }
+
+      // Small delay so page renders 
+      // before redirect
+      setTimeout(function() {
+        window.location.href = appUrl;
+      }, 500);
+    })();
+  </script>
+</body>
+</html>
