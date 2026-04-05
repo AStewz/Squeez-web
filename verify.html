@@ -27,12 +27,6 @@
       color: #8A5200;
       font-size: 16px;
     }
-    #debug {
-      font-size: 12px;
-      color: #C4610A;
-      word-break: break-all;
-      margin-top: 16px;
-    }
   </style>
 </head>
 <body>
@@ -42,16 +36,9 @@
       alt="Squeez"
     />
     <p>Opening Squeez...</p>
-    <p id="debug"></p>
   </div>
   <script>
     (function() {
-      // Show full URL for debugging
-      document.getElementById('debug')
-          .textContent = 
-          'URL: ' + window.location.href;
-
-      // Parse both query params and fragment
       const search = window.location.search;
       const hash = window.location.hash
           .substring(1);
@@ -61,18 +48,15 @@
       const fragmentParams = 
           new URLSearchParams(hash);
 
-      // Get token_hash
       const tokenHash = 
           queryParams.get('token_hash') ||
           fragmentParams.get('token_hash');
 
-      // Get type
       const type = 
           queryParams.get('type') ||
           fragmentParams.get('type') ||
           'email_change';
 
-      // Get access_token (implicit fallback)
       const accessToken = 
           fragmentParams.get('access_token');
       const refreshToken = 
@@ -93,10 +77,9 @@
         appUrl = 'squeez://callback';
       }
 
-      // 5 second delay for debugging
       setTimeout(function() {
         window.location.href = appUrl;
-      }, 5000);
+      }, 1000);
     })();
   </script>
 </body>
