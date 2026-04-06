@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Squeez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream:      #FFFBF0;
+      --cream-dark: #F5EDD8;
+      --yellow:     #F5D32A;
+      --amber:      #E8960A;
+      --orange:     #C4610A;
+      --brown:      #4A2800;
+      --brown-mid:  #7A4A10;
+      --brown-light:#A06020;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--brown);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--brown);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .site-name {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 28px;
+      display: block;
+    }
+
+    header h1 {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: clamp(32px, 6vw, 52px);
+      color: var(--cream);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: var(--amber);
+      letter-spacing: 0.04em;
+    }
+
+    /* Layout */
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+
+    /* Intro */
+    .intro {
+      font-size: 18px;
+      color: var(--brown-mid);
+      line-height: 1.8;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--cream-dark);
+      margin-bottom: 56px;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 56px;
+    }
+
+    section h2 {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--brown);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--amber);
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .section-number {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      color: var(--amber);
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+    }
+
+    section h3 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--brown);
+      margin: 28px 0 8px;
+    }
+
+    p {
+      color: var(--brown-mid);
+      margin-bottom: 16px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 12px 0 16px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul li {
+      color: var(--brown-mid);
+      padding: 6px 0 6px 28px;
+      position: relative;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 16px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--amber);
+    }
+
+    /* Allergen callout */
+    .callout {
+      background: #FFF8E8;
+      border-left: 4px solid var(--amber);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+
+    .callout-title {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--orange);
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .callout-title::before {
+      content: '!';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: white;
+      font-size: 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .callout p {
+      font-size: 15px;
+      color: var(--brown);
+      margin-bottom: 10px;
+    }
+
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* Contact */
+    .contact-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--amber);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .contact-link:hover {
+      border-color: var(--amber);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--brown);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      color: var(--brown-light);
+    }
+
+    footer a {
+      color: var(--yellow);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .page { padding: 40px 20px 80px; }
+      header { padding: 36px 20px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="site-name">Squeez</span>
+  <h1>Terms of Service</h1>
+  <p class="meta">Last updated: April 2026</p>
+</header>
+
+<div class="page">
+
+  <p class="intro">These terms govern your use of the Squeez app. By using Squeez, you agree to them. If you do not agree, please do not use the app.</p>
+
+  <section>
+    <h2><span class="section-number">01</span> Acceptance of Terms</h2>
+    <p>By downloading or using Squeez, you confirm that you are aged 13 or over and that you agree to these Terms of Service. If you are under 18, you should have permission from a parent or guardian.</p>
+    <p>These terms form a legal agreement between you and Alexander John Stewart, the individual operating Squeez, based in the United Kingdom. Any questions can be sent to hello@squeez.uk.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">02</span> The Service</h2>
+    <p>Squeez is a recipe management app for iOS. It lets you collect, organise, and cook from your own personal recipe library, whether you import recipes from the web, social media, photos, or create them yourself.</p>
+    <p>Squeez is provided as-is. We do our best to keep it working well, but we cannot guarantee it will always be available, error-free, or identical to how it works today. Features may change, be added, or be removed over time. Where changes are significant, we will update the date on these terms and flag it in the app where possible.</p>
+    <p>We reserve the right to modify, suspend, or discontinue the service, or any part of it, with reasonable notice. We will not pull the rug out without good reason.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">03</span> User Accounts</h2>
+    <p>When you first open Squeez, an anonymous session is created automatically. You do not need to register to start using the app.</p>
+    <p>You can optionally create a free account with your email address and a password. This lets you access your recipes across sessions and unlocks additional features.</p>
+    <p>If you create an account, you are responsible for keeping your login credentials secure. Please do not share your account with anyone else. One account per person.</p>
+    <p>We reserve the right to suspend or terminate accounts that violate these terms. If that happens, we will try to let you know why.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">04</span> Acceptable Use</h2>
+    <p>Squeez is for personal, non-commercial use. You agree not to:</p>
+    <ul>
+      <li>Use the app for any unlawful purpose</li>
+      <li>Attempt to scrape content or run automated imports at scale</li>
+      <li>Try to reverse engineer, decompile, or tamper with the app or its backend</li>
+      <li>Attempt to compromise the security or integrity of our systems</li>
+      <li>Upload or import content that infringes the intellectual property or other rights of a third party</li>
+      <li>Use the app in any way that could harm other users or the service itself</li>
+    </ul>
+    <p>Almost all normal use of a recipe app falls well within these limits. These rules are here to protect the service and its users.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">05</span> Recipe Content and Intellectual Property</h2>
+    <h3>Your content</h3>
+    <p>Recipes, notes, and other content you create within Squeez belong to you. By using the app, you grant us a limited licence to store, process, and display your content solely for the purpose of providing the service to you. We do not claim any ownership over what you create.</p>
+    <h3>Imported content</h3>
+    <p>When you import a recipe from a website, social media, or other source, you are responsible for ensuring you have the right to do so. Squeez processes and stores that content to create your personal recipe, but we are not responsible for the copyright status of the original source material.</p>
+    <h3>Squeez's intellectual property</h3>
+    <p>Everything else, including the Squeez name and logo, the app design, the codebase, and all associated materials, belongs to Alexander John Stewart. You may not copy, reproduce, or redistribute any part of it without permission.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">06</span> AI Features and Recipe Accuracy</h2>
+    <p>When you import a recipe from a URL, share extension, or photo, Squeez uses AI (OpenAI's GPT-4o-mini) to parse the content into a structured recipe. This is a convenience feature. The AI does a good job, but it is not perfect.</p>
+
+    <div class="callout">
+      <p class="callout-title">Always verify imported recipes before cooking</p>
+      <p>AI-parsed recipes may contain errors in ingredients, quantities, cooking times, or instructions. Squeez makes no warranty about the accuracy of any imported recipe data.</p>
+      <p>This is especially important if you or anyone you are cooking for has a food allergy or intolerance. Never rely solely on an imported recipe for allergen information. Always check the original source or the ingredient packaging.</p>
+    </div>
+
+    <p>Squeez is not liable for any harm resulting from errors in imported or AI-processed recipe content, including allergen-related harm. You use imported recipes at your own risk.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">07</span> Subscriptions and Payments</h2>
+    <p>Squeez offers a free tier and a premium subscription. The premium subscription unlocks additional features and is billed via Apple's In-App Purchase system.</p>
+    <p>All payments are processed by Apple. Squeez never sees or stores your payment card details. Subscription management, including renewals and cancellations, is handled through your Apple ID account settings.</p>
+    <p>Refunds are governed by Apple's refund policy. We do not process refunds directly. If you have a billing issue, please contact Apple Support.</p>
+    <p>Subscription pricing may change. We will give reasonable notice before any price change takes effect.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">08</span> Limitation of Liability</h2>
+    <p>To the fullest extent permitted by UK law, Squeez and Alexander John Stewart as its operator will not be liable for any indirect, incidental, or consequential losses arising from your use of the app, including loss of data, loss of revenue, or losses arising from errors in recipe content.</p>
+    <p>In plain terms: if something goes wrong with the app and it causes you a problem, we are sorry, but our liability is limited.</p>
+    <p>For users who have paid for a subscription, our total liability for any claim will not exceed the amount you paid in the 12 months before the claim arose. For users who have not paid anything, we do not accept liability beyond what is required by law.</p>
+    <p>Nothing in these terms excludes liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be excluded under UK law.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">09</span> Third-Party Services</h2>
+    <p>Squeez relies on third-party services to function, including Supabase (database and storage), OpenAI (AI recipe parsing), RevenueCat (subscription management), Apple (payments and app distribution), and Sentry (crash reporting).</p>
+    <p>We are not responsible for the availability, actions, or policies of these services. If a third-party service experiences an outage or changes its terms, it may affect Squeez. We will do our best to minimise disruption but cannot guarantee continuity in those cases.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">10</span> Changes to These Terms</h2>
+    <p>We may update these terms from time to time. When we do, we will update the date at the top of this document. For significant changes, we will try to flag it within the app.</p>
+    <p>Continuing to use Squeez after updated terms are published means you accept the changes. If you do not agree with an update, you should stop using the app and delete your account.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">11</span> Termination</h2>
+    <p>You can stop using Squeez and delete your account at any time from within the app. Account deletion immediately and permanently removes all your data.</p>
+    <p>We may suspend or terminate your access to Squeez if you breach these terms. We will try to give you notice and an explanation where it is reasonable to do so.</p>
+    <p>If your account is terminated, any active subscription will need to be cancelled separately through your Apple ID settings. We are not able to cancel Apple subscriptions on your behalf.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">12</span> Governing Law</h2>
+    <p>These terms are governed by the laws of England and Wales. Any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+  </section>
+
+  <section>
+    <h2><span class="section-number">13</span> Contact</h2>
+    <p>If you have any questions about these terms, please get in touch:</p>
+    <a class="contact-link" href="mailto:hello@squeez.uk">hello@squeez.uk</a>
+  </section>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 Alexander John Stewart &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
