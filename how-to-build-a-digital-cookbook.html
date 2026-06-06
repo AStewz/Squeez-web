@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Build a Digital Cookbook for Weekly Meal Planning | Squeez</title>
+  <meta name="description" content="Learn how to organise your saved recipes into a beautiful digital cookbook and use it for stress-free weekly meal planning. Step-by-step guide using Squeez." />
+  <link rel="canonical" href="https://squeez.uk/how-to-build-a-digital-cookbook" />
+  <meta property="og:title" content="How to Build a Digital Cookbook for Weekly Meal Planning | Squeez" />
+  <meta property="og:description" content="Turn your scattered TikTok saves, screenshots and bookmarks into a beautiful, functional digital cookbook. Here is the complete guide." />
+  <meta property="og:url" content="https://squeez.uk/how-to-build-a-digital-cookbook" />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --yellow: #F5D32A; --amber: #E8960A; --orange: #C4610A; --brown: #4A2800; --cream: #FFFBF0; --cream-warm: #FFF8E0; --text-muted: #9A6030; --text-body: #5C3010; }
+    body { font-family: "DM Sans", sans-serif; background: var(--cream); color: var(--text-body); line-height: 1.75; }
+    nav { position: sticky; top: 0; z-index: 100; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(255,251,240,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(232,150,10,0.12); }
+    nav a.back { font-size: 0.85rem; color: var(--orange); text-decoration: none; font-weight: 500; }
+    nav a.back:hover { color: var(--brown); }
+    .article-hero { background: var(--cream-warm); padding: 4rem 2rem 3rem; text-align: center; border-bottom: 1px solid rgba(232,150,10,0.15); }
+    .article-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber); margin-bottom: 1rem; display: block; }
+    .article-hero h1 { font-family: "Playfair Display", serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: var(--brown); line-height: 1.2; max-width: 720px; margin: 0 auto 1rem; }
+    .article-hero h1 em { font-style: italic; color: var(--orange); }
+    .article-meta { font-size: 0.82rem; color: var(--text-muted); }
+    .article-body { max-width: 720px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .article-body h2 { font-family: "Playfair Display", serif; font-size: 1.4rem; font-weight: 700; color: var(--brown); margin: 2.5rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid rgba(232,150,10,0.2); }
+    .article-body p { font-size: 1rem; color: var(--text-body); margin-bottom: 1rem; line-height: 1.8; }
+    .article-body ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+    .article-body li { font-size: 1rem; color: var(--text-body); margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body strong { color: var(--brown); font-weight: 600; }
+    .step-block { background: var(--cream-warm); border-left: 3px solid var(--amber); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+    .step-block strong { color: var(--orange); display: block; margin-bottom: 0.25rem; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .step-block p { margin-bottom: 0; }
+    .article-cta { background: var(--brown); border-radius: 16px; padding: 2rem; text-align: center; margin-top: 3rem; }
+    .article-cta p { color: rgba(255,251,240,0.75); margin-bottom: 1.25rem; font-size: 0.95rem; }
+    .article-cta img { height: 44px; }
+    footer { background: var(--brown); color: rgba(255,251,240,0.45); padding: 2rem; text-align: center; font-size: 0.8rem; }
+    footer a { color: rgba(245,211,42,0.6); text-decoration: none; margin: 0 0.5rem; }
+    footer a:hover { color: var(--yellow); }
+    .footer-links { margin-bottom: 0.75rem; }
+    @media (max-width: 768px) { .article-hero { padding: 3rem 1.5rem 2rem; } .article-body { padding: 2rem 1.5rem 4rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" style="border-bottom:none;line-height:0;">
+      <img src="https://monliopueoanzquualme.supabase.co/storage/v1/object/public/Assets/App%20Horizontal%20Logo.png" alt="Squeez" style="height:54px;width:auto;" />
+    </a>
+    <a href="index.html" class="back">← Back</a>
+  </nav>
+
+  <div class="article-hero">
+    <span class="article-label">Squeez Guide</span>
+    <h1>How to Build a Digital Cookbook <em>(And Actually Use It for Weekly Meal Planning)</em></h1>
+    <p class="article-meta">By the Squeez team</p>
+  </div>
+
+  <div class="article-body">
+
+    <p>We live in the golden age of food inspiration. Every day, our feeds are flooded with mouth-watering TikTok cooking clips, beautiful Instagram Reels and viral blog recipes. But there is a catch: our actual organisation of these recipes is a total disaster.</p>
+
+    <p>Most of us have a Saved folder on TikTok, a separate collection on Instagram, a camera roll full of disorganised screenshots and 20 open tabs in Safari. When Sunday rolls around and it is time to figure out what to cook for the week, you spend an hour scrolling through different apps trying to remember where you saw that specific pasta dish.</p>
+
+    <p>Here is the complete blueprint for building a beautiful, functional digital cookbook that automatically handles your weekly meal planning.</p>
+
+    <h2>Step 1: Centralise Your Scattered Feeds into One Library</h2>
+
+    <p>The first step to stress-free meal planning is getting everything into one single view. Instead of hopping between social media apps, you can use Squeez to instantly pull your recipes from anywhere.</p>
+
+    <p>Whether you are importing a 60-second video via the TikTok share extension, grabbing an Instagram Reel, or saving a link from a food blog, Squeez strips away the noise and converts it into a clean, text-based recipe card. Once imported, Squeez builds a visual library of your food, acting as your own personal cookbook where every recipe looks uniform, clean and easy to read.</p>
+
+    <h2>Step 2: Organise Your Library with Custom Folders and Favourites</h2>
+
+    <p>A cookbook is only useful if you can find what you are looking for instantly. Squeez gives you the curation tools to design your library exactly how your brain works:</p>
+
+    <ul>
+      <li><strong>The Favourites tab:</strong> Keep your absolute go-to, tried-and-true weekly staples just a single tap away.</li>
+      <li><strong>Custom folders:</strong> Group your culinary collection by course, diet or vibe. Create folders for 15-Minute Weeknight Dinners, Sunday Meal Prep, Healthy Lunches or Date Night Inspiration.</li>
+    </ul>
+
+    <p>Instead of a chaotic, endless scroll of random videos, you now have a curated, searchable database of meals tailored entirely to your tastes.</p>
+
+    <h2>Step 3: Batch-Plan Your Week and Auto-Generate Your List</h2>
+
+    <p>Once you have a tidy digital cookbook, weekly meal planning goes from a chore to a 60-second task. On Sunday, open your custom folders, pick the meals you want to tackle for the week and let Squeez handle the logistics.</p>
+
+    <p>Instead of writing down ingredients on a scrap of paper, jump into your list, multi-select your recipes and Squeez will build the list organised by categories. If you already have some ingredients, simply tap the ones you need from inside a recipe to send only those to your active list.</p>
+
+    <h2>Step 4: Shop with an Interactive, Custom-Curated List</h2>
+
+    <p>Squeez does not just stop at creating the list. Because Squeez allows you to assign your own custom categories right inside your recipes, your generated shopping list perfectly mirrors your personal shopping style. When you hit the store:</p>
+
+    <ul>
+      <li>Drag and reorder categories to match the physical layout of your local supermarket aisle by aisle.</li>
+      <li>Collapse sections you have finished with to keep your screen clean.</li>
+      <li>Use the Hide Checked Items toggle so the list physically shrinks as you drop items into your cart.</li>
+    </ul>
+
+    <div class="article-cta">
+      <p>Stop letting great recipes get lost in the social media abyss. Build your ultimate personal cookbook with Squeez and go from feed to table seamlessly.</p>
+      <a href="https://apps.apple.com/gb/app/squeez-recipes/id6761775636" target="_blank" rel="noopener">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Squeez on the App Store" />
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:hello@squeez.uk">hello@squeez.uk</a>
+    </div>
+    <p>© 2026 Alexander John Stewart · Made in London</p>
+  </footer>
+</body>
+</html>
