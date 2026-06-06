@@ -631,6 +631,80 @@
       text-transform: uppercase;
     }
 
+    /* ── GUIDES ── */
+    .guides {
+      background: var(--cream-warm);
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .guides-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .guides-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 3rem;
+      text-align: left;
+    }
+
+    .guide-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid rgba(232, 150, 10, 0.15);
+      text-decoration: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .guide-card:hover {
+      border-color: var(--amber);
+      transform: translateY(-2px);
+    }
+
+    .guide-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(232, 150, 10, 0.08);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .guide-text { flex: 1; }
+
+    .guide-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 0.35rem;
+      line-height: 1.3;
+    }
+
+    .guide-text p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .guide-arrow {
+      flex-shrink: 0;
+      margin-top: 2px;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+
+    .guide-card:hover .guide-arrow { opacity: 1; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .feature {
@@ -644,6 +718,8 @@
       .feature-image { order: -1; }
 
       .pricing-cards { grid-template-columns: 1fr; }
+
+      .guides-grid { grid-template-columns: 1fr; }
 
       nav { padding: 1rem 1.25rem; }
     }
@@ -866,6 +942,64 @@
             <li>Shopping list builder</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDES -->
+  <section class="guides">
+    <div class="guides-inner">
+      <div class="section-label">Guides</div>
+      <h2 class="section-title">Learn how to get <em>more from Squeez</em></h2>
+      <div class="guides-grid">
+        <a href="how-to-save-recipes-from-tiktok" class="guide-card">
+          <div class="guide-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </div>
+          <div class="guide-text">
+            <h3>How to Save Recipes from TikTok</h3>
+            <p>Turn any cooking video into a clean, searchable recipe in seconds using the share extension.</p>
+          </div>
+          <div class="guide-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+        <a href="turn-recipes-into-shopping-list" class="guide-card">
+          <div class="guide-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+          <div class="guide-text">
+            <h3>How to Turn Recipes into a Shopping List</h3>
+            <p>Stop copying ingredients manually. Auto-generate your grocery list from any recipe in seconds.</p>
+          </div>
+          <div class="guide-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+        <a href="how-to-build-a-digital-cookbook" class="guide-card">
+          <div class="guide-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="guide-text">
+            <h3>How to Build a Digital Cookbook</h3>
+            <p>Organise your scattered saves, screenshots and bookmarks into a beautiful recipe library.</p>
+          </div>
+          <div class="guide-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+        <a href="digital-grocery-list-features" class="guide-card">
+          <div class="guide-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          </div>
+          <div class="guide-text">
+            <h3>5 Features Your Grocery List App Is Missing</h3>
+            <p>Custom categories, collapsible sections and a smarter way to shop the supermarket.</p>
+          </div>
+          <div class="guide-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
       </div>
     </div>
   </section>
