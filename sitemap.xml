@@ -2,8 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://squeez.uk/</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-06-06</lastmod>
     <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://squeez.uk/how-to-save-recipes-from-tiktok</loc>
+    <lastmod>2026-06-06</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://squeez.uk/turn-recipes-into-shopping-list</loc>
+    <lastmod>2026-06-06</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://squeez.uk/how-to-build-a-digital-cookbook</loc>
+    <lastmod>2026-06-06</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://squeez.uk/digital-grocery-list-features</loc>
+    <lastmod>2026-06-06</lastmod>
+    <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
